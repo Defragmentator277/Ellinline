@@ -1,0 +1,291 @@
+/* MAIN PART */
+main
+{
+    height: 500px;
+}
+
+main  button
+{
+    height: calc(60px + 1vw);
+    border-radius: calc(30px + 1vw);
+}
+
+main > div#back
+{
+    background-image: url(images/back_main.jpg);
+    background-position: center;
+    background-size: cover;
+    height: inherit;
+}
+
+.enter_words
+{
+    margin: 45px auto;
+    width: 60%;
+    padding: 0 35px;
+}
+.enter_words > hr
+{
+    background-color: black;
+}
+.enter_words > h1
+{
+    margin-bottom: 25px;
+}
+.enter_words > h2
+{
+    margin-top: 25px;
+}
+.enter_words > h1, .enter_words > h2
+{
+    text-align: center;
+}
+
+#attractions
+{
+    margin: 0 auto;
+    padding: 25px 35px;
+    background-color: #CACACA;
+    margin-bottom: 35px;
+}
+
+#attractions > h2
+{
+    word-break: break-all;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.img
+{
+    background-position: center;
+    background-size: cover;
+}
+
+#picture_box > div
+{
+    margin-bottom: 15px;
+}
+
+#picture_box .img
+{
+    height: 1000px;
+}
+
+#picture_box .img ~ h1
+{
+    text-align: center;
+}
+
+#picture_box  #_1
+{
+    background-image: url(images/ermitage.jpg);
+}
+#picture_box  #_2
+{
+    background-image: url(images/cunzcamera.jpg);
+}
+#picture_box  #_3
+{
+    background-image: url(images/column.jpg);
+}
+
+#tours
+{
+    margin: 45px auto;
+    height: fit-content;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
+    padding: 25px 35px;
+}
+#tours > button
+{
+    display: block;
+    margin: 25px auto;
+    background-color: transparent;
+}
+
+#tours_box > div 
+{
+    height: fit-content;
+}
+#tours_box .img
+{
+    width: 100%;
+    height: 600px;
+}
+#tours_box .img ~ h2
+{
+    font-weight: bold;
+}
+#tours_box .img ~ h3
+{
+    text-align: justify;   
+}
+#tours_box #_1 > .img
+{
+    background-image: url(images/hilovo.jpg);
+}
+#tours_box #_2 > .img
+{
+    background-image: url(images/ship.jpg);
+}
+#tours_box #_3 > .img
+{
+    background-image: url(images/red_area.jpg);
+} 
+#tours_box #_4 > .img
+{
+    background-image: url(images/mountain.jpg);
+}
+
+#hotel
+{
+    height: 1400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/hotel.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-position: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+#hotel > div
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#hotel > div > div
+{
+    display: block;
+    margin: 25px auto;
+    padding: 15px 15px;
+    width: inherit;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.25);
+}
+#hotel h2, #hotel button
+{   
+    font-weight: normal;
+}
+#hotel h2, #hotel h1
+{
+    text-align: center;
+}
+#hotel button
+{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#reviews
+{
+    padding: 15px 25px;
+    background-color: #CACACA;
+}
+#reviews > .enter_words > hr
+{
+    background-color: white;
+}
+#comments
+{
+    margin: 0 auto;
+}
+#comments .img
+{
+    height: 250px;
+    /* width: 300px; */
+}
+.comment
+{
+    padding-bottom: 15 px;
+}
+#comments #_1 .img
+{
+    background-image: url(images/people_1.jpg);
+}
+#comments #_2 .img
+{
+    background-image: url(images/people_2.jpg);
+}
+#comments #_3 .img
+{
+    background-image: url(images/people_3.jpg);
+}
+#comments #_4 .img
+{
+    background-image: url(images/people_4.jpg);
+}
+
+@media all and (max-width: 1440px)
+{
+    #attractions .img
+    {
+        height: 500px;
+    }
+
+    #tours_box .img
+    {
+        height: 300px;
+    }
+
+    #hotel
+    {
+        height: 750px;
+    }
+}
+@media all and (max-width: 1024px)
+{
+    #hotel
+    {
+        height: 650px;
+    }
+}
+@media all and (max-width: 768px)
+{
+    #attractions .img
+    {
+        height: 300px;
+    }
+
+    .enter_words
+    {
+        width: 100%;
+    }
+
+    #hotel
+    {
+        height: 475px;
+    }
+}
+@media all and (max-width: 425px)
+{
+    #attractions h1, .enter_words h1, #hotel h1
+    {
+        font-size: calc(1.5em + 1vw);
+    }
+
+    #attractions h2, .enter_words h2, #tours h2, #hotel h2
+    {
+        font-size: calc(1.25em + 1vw);
+    }
+
+    #tours h3
+    {
+        font-size: calc(0.7em + 1vw);
+    }
+
+}
+@media all and (max-width: 320px)
+{
+    #tours button
+    {
+        height: 80px;
+        border-radius: 40px;
+    }
+}
