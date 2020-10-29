@@ -6,33 +6,38 @@
 a
 {
     text-decoration: none;
-    font-size: calc(0.5em + 1vw);
+    font-size: calc(1em + 1vw);
 }
 h1
 {
-    font-size: calc(2.2em + 1vw);
+    font-size: calc(3.2em + 1vw);
 }
 h2
 {
     font-weight: normal;
-    font-size: calc(1.5em + 1vw);
+    margin: 0;
+    font-size: calc(2em + 1vw);
 }
 h3
 {
     font-weight: normal;
-    font-size: calc(0.9em + 1vw);
+    font-size: calc(1.25em + 1vw);
 }
 button
 {
-    height: calc(60px + 1vw);
+    height: calc(5em + 1vw);
     padding: 10px 15px;
-    border-radius: 30px;
+    border-radius: calc((5em + 1vw) / 2);
+}
+input
+{
+    display: block;
 }
 
 header
 {
     position: fixed;
-    height: 180px;
+    height: 120px;
     width: 100%;
     z-index: 1;
 }
@@ -77,12 +82,89 @@ header ul > li
     padding: 0 10px;
     transition: opacity 1s linear, height 1s ease-out;
 }
+
+footer
+{
+    /* height: 1000px; */
+    height: fit-content;
+    background-color: #444444;
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+
+footer h2
+{
+    font-weight: normal;
+    margin: 80px auto;
+}
+footer hr
+{
+    margin-top: 50px;
+    background-color: white;
+    height: 5px;
+}
+
+/* .search
+{
+
+} */
+
 @media all and (max-width: 1440px)
 {
     header
     {
         height: 90px;
     }
+    h1
+    {
+        font-size: calc(2.2em + 1vw);
+    }
+    h2
+    {
+        font-weight: normal;
+        font-size: calc(1.25em + 1vw);
+    }
+    h3
+    {
+        font-weight: normal;
+        font-size: calc(0.9em + 1vw);
+    }
+    footer hr
+    {
+        height: 2px;
+    }
+    footer h2
+    {
+        margin: 60px;
+    }
+    
+}
+@media all and (max-width: 1024px)
+{
+    header
+    {
+        height: 90px;
+    }
+    h1
+    {
+        font-size: calc(1.7em + 1vw);
+    }
+    h2
+    {
+        font-weight: normal;
+        font-size: calc(1em + 1vw);
+    }
+    h3
+    {
+        font-weight: normal;
+        font-size: calc(0.8em + 1vw);
+    }
+    footer h2
+    {
+        margin: 40px;
+    }
+    
 }
 @media all and (max-width: 990px)
 {
@@ -100,6 +182,33 @@ header ul > li
     {
         background-color: rgba(255, 255, 255, 1);
     } */
+}
+@media all and (max-width: 768px)
+{
+    footer
+    {
+        padding: 25px;
+    }
+}
+@media all and (max-width: 425px)
+{
+    h1
+    {
+        font-size: calc(1.5em + 1vw);
+    }
+
+    h2
+    {
+        font-size: calc(1.25em + 1vw);
+    }
+
+    h3
+    {
+        font-size: calc(0.7em + 1vw);
+    }
+
+
+
 }
 /* ANIMATION CLASSES */
 .show

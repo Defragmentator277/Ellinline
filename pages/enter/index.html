@@ -6,9 +6,9 @@
     <title>Ellinline</title>
     <script src="../jquery.min.js"></script>
     <script src="./main.js"></script>
+    <link rel="stylesheet" href="../bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../bootstrap.css">
 </head>
 <body>
     <header>
@@ -28,7 +28,45 @@
 
     <main>
         <!-- TOP IMAGE -->
-        <div id="back"></div>
+        <div id="back">
+            <div></div>
+            <div class="search">
+                <h1>Успейте заказать тур вашей мечты!</h1>
+                <!-- TABS -->
+                <ul class="tabs">
+                    <li id="tour" class="active"><h2>Туры</h2></li>
+                    <li id="railroad"><h2>РЖД</h2></li>
+                    <li id="fly"><h2>Авиа перелеты</h2></li>
+                </ul>
+                <!-- UNDER TABS -->
+                <ul class="pages">
+                    <!-- TOUR TAB -->
+                    <li class="row" id="tour_tab">
+                        <div class="col-lg col-md-6 col-sm-12">
+                            <h3>Куда</h3>
+                            <input type="text" id="where_input">
+                        </div>
+                        <div class="col-lg col-md-6 col-sm-12">
+                            <h3>Период вылета</h3>
+                            <input type="text" id="period_start">
+                        </div>
+                        <div class="col-lg col-md-6 col-sm-12">
+                            <h3>Кол-во ночей</h3>
+                            <input type="text" id="period_start">
+                        </div>
+                        <div class="col-lg-2 col-md-6 col-sm-12 h-100 align-self-center">
+                            <button><h3>Найти</h3></button>
+                        </div>
+                    </li>
+                    <li class="row" id="railroad_tab">
+
+                    </li>
+                    <li class="row" id="fly_tab">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
         <!-- ENTER WORDS -->
         <div class="enter_words">
             <h1>
@@ -114,7 +152,7 @@
         <div id="hotel">
             <div>
                 <div>
-                    <h1>Отели Санкт-Петербург</h1>
+                    <h1>Отели Санкт-Петербурга</h1>
                     <h2>Вы можете отдохнуть в spa-отели "Аквамарин" или в отели "Гелиос"</h2>
                 </div>
                 <button><h2>Заказать номер</h2></button>
@@ -135,10 +173,10 @@
             </div>
             <div id="comments" class="row container-fluid">
                 <div id="_1" class="сol-lg-3 col-md-6 col-sm-12 row comment">
-                    <div class="col-4 img">
+                    <div class="w-25 img">
 
                     </div>
-                    <div class="col-8">
+                    <div class="col">
                         <h3>
                             Это было мое третья путешествие на лыжах. 
                             Я профессионально катаюсь и много уже где был. 
@@ -149,10 +187,10 @@
                     </div>
                 </div>
                 <div id="_2" class="сol-lg-3 col-md-6 col-sm-12 row comment">
-                    <div class="col-4 img">
+                    <div class="w-25 img">
 
                     </div>
-                    <div class="col-8">
+                    <div class="col">
                         <h3>
                             Воу! Это было что-то абсолютно новое 
                             и непредсказуемое в моей жизни! 
@@ -162,10 +200,10 @@
                     </div>
                 </div>
                 <div id="_3" class="сol-lg-3 col-md-6 col-sm-12 row comment">
-                    <div class="col-4 row-cols-1 img">
+                    <div class="w-25 row-cols-1 img">
 
                     </div>
-                    <div class="col-8">
+                    <div class="col">
                         <h3>
                             Мне и моей семье очень нравится бывать на природе. 
                             Ellinline мы любим за возможность выбрать интересный тур, 
@@ -175,10 +213,10 @@
                     </div>
                 </div>
                 <div id="_4" class="сol-lg-3 col-md-6 col-sm-12 row comment">
-                    <div class="col-4 img">
+                    <div class="w-25 img">
 
                     </div>
-                    <div class="col-8">
+                    <div class="col">
                         <h3>
                             Спасибо вам, команда Ellinline! 
                             Вы создаете мои лучшие приключения — в Канаду, Гренландию, Финляндию. 
@@ -189,10 +227,20 @@
                     </div>
                 </div>
             </div>
+            <button><h2>Оставить отзыв</h2></button>
         </div>
     </main>
     <footer>
-
+        <h1>КОНТАКТНАЯ ИНФОРМАЦИЯ</h1>
+        <h2>
+            Телефон: +7 800 555 35 35 <br>
+            Почта: Ellinline@mail.ru
+        </h2>
+        <h3>Ellinline, Санкт-Петербург, Россия</h3>
+        <hr>
+        <div class="icons">
+            
+        </div>
     </footer>
 </body>
 </html>
