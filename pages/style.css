@@ -1,9 +1,14 @@
-*
+/* *
 {
     margin: 0;
     padding: 0;
+} */
+a, h1, h2, h3
+{
+    color: rgb(198,190,123);
+
 }
-a
+a, input
 {
     text-decoration: none;
     font-size: calc(1em + 1vw);
@@ -48,9 +53,22 @@ header
 }
 
 /* LOGO PART */
+header
+{
+    /* padding: 0 10%; */
+    padding-left: 2.5%;
+    background-color: rgba(46, 47, 44, 1);
+}
+
+header h3
+{
+    font-size: calc(0.5em + 1vw);
+    color: #938C90;
+}
+
 header a
 {
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(0.4em + 1vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,39 +78,85 @@ header a
 
 header > ul > li#logo
 {
-    display: block;
+    display: inline-block;
+    /* width: 25%; */
     background-image: url(images/logo.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     height: inherit;    
+}
+
+li#logo ~ ul
+{
+    /* padding-left: 15px;
+    padding: 0; */
+    height: 75%;
+}
+
+#search_field
+{
+    background-color: rgba(46, 47, 44, 1);
+}
+#search_field > input
+{
+    height: 35px;
+    padding: 0;
+}
+#search_field > i
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(198, 190, 123);
+    font-size: 1.5em;
+    /* display: block;
+    height: fit-content; */
+}
+#search_field > i:hover
+{
+    cursor: pointer;
+    color: white;
 }
 
 header > ul
 {
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+    overflow: visible;
     transition: background-color 0.5s ease-in;
 }
 
+header  ul > li:hover > a
+{
+    color: white;
+    text-decoration: none;
+}
 
-header ul > li
+
+header li#logo ~ ul li
 {
     display: block;
-    height: inherit;
-    padding: 0 10px;
-    transition: opacity 1s linear, height 1s ease-out;
+    height: 100%;
+    padding: 0;
+    background-color: rgba(46, 47, 44, 1);
+    border: 2px solid black;
+    transition: opacity 0.5s linear, height 1s ease-out;
 }
 
 footer
 {
     /* height: 1000px; */
     height: fit-content;
-    background-color: #444444;
+    background-color: #2A2729;
     color: white;
     text-align: center;
     padding: 80px;
 }
 
+footer h3, footer h2
+{
+    color: #938C90;
+}
 footer h2
 {
     font-weight: normal;
@@ -105,6 +169,36 @@ footer hr
     height: 5px;
 }
 
+#feedback
+{
+    position: fixed;
+    z-index: 1;
+    background-color: #2A2729;
+    border: 2px solid rgb(198, 190, 123);
+    border-radius: 10px;
+    height: 0px;
+    width: 250px;
+    right: 15px;
+    bottom: -10px;
+    transition: height 0.5s cubic-bezier(0.11, 0, 0.5, 0);
+}
+#feedback > h3
+{
+    display: block;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid rgb(198, 190, 123);
+}
+#feedback > h3:hover
+{
+    cursor: pointer;
+}
+
+#uppage
+{
+    height: 0px;
+    left: 15px;
+}
 /* .search
 {
 
@@ -123,12 +217,12 @@ footer hr
     h2
     {
         font-weight: normal;
-        font-size: calc(1.25em + 1vw);
+        font-size: calc(1em + 1vw);
     }
     h3
     {
         font-weight: normal;
-        font-size: calc(0.9em + 1vw);
+        font-size: calc(0.5em + 1vw);
     }
     footer hr
     {
@@ -166,22 +260,37 @@ footer hr
     }
     
 }
-@media all and (max-width: 990px)
+@media all and (max-width: 991px)
 {
-    header ul > li
+    li#logo ~ ul
+    {
+        padding: 0;
+    }
+    header
+    {
+        padding: 0;
+    }
+    header li#logo ~ ul li
     {
         height: 0;
         opacity: 0;
-        background-color: rgba(255, 255, 255, 0.5);
+        margin-left: 15px;
+        background-color: rgba(46, 47, 44, 1);
     }
-    li#logo
+    header > ul > li#logo
     {
         opacity: 1;
+        background-position: center;
     }
-    /* header ul
+    header h3, header h2
     {
-        background-color: rgba(255, 255, 255, 1);
-    } */
+        display: none;
+    }
+    #search_field
+    {
+        padding: 15px 5px;
+        margin-left: 30px;
+    }
 }
 @media all and (max-width: 768px)
 {
@@ -210,10 +319,27 @@ footer hr
 
 
 }
+@media all and (max-width: 320px)
+{
+    #feedback
+    {
+        width: auto;
+        left: 15px;
+    }
+}
+/* MIN_WIDTH */
+
 /* ANIMATION CLASSES */
-.show
+header li#logo ~ ul li.show
 {
     height: 100%;
     opacity: 1;
-    background-color: rgba(255, 255, 255, 1);
 }
+/* .show_feedback_part
+{
+
+}
+.show_feedback_full
+{
+
+} */

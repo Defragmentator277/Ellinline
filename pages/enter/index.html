@@ -6,30 +6,47 @@
     <title>Ellinline</title>
     <script src="../jquery.min.js"></script>
     <script src="./main.js"></script>
+    <script src="https://use.fontawesome.com/6ca3a3f6a0.js"></script>
     <link rel="stylesheet" href="../bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header>
-        <!-- TOP MENU -->
-        <ul class="row">
-            <!-- LOGO -->
-            <li id="logo" class="col-lg-3 col-sm-12"><a href="#"></a></li>
-            <li class="col-lg col-sm-12"><a href="#">Кнопка 1</a></li>
-            <li class="col-lg col-sm-12"><a href="#">Кнопка 2</a></li>
-            <li class="col-lg col-sm-12"><a href="#">Кнопка 3</a></li>
-            <li class="col-lg col-sm-12"><a href="#">Кнопка 4</a></li>
-            <li class="col-lg-3 col-sm-12" id="info">
-                <a href="#">Ваш туроператор с 1993 г.</a>
-            </li>
-        </ul>
-    </header>
-
+    <!-- FEEDBACK FORM -->
+    <div id="feedback" data-active="false">
+        <h3>Обратная связь</h3>
+    </div>
+    <!-- <div id="uppage">
+        <h3>^^</h3>
+    </div> -->
     <main>
         <!-- TOP IMAGE -->
         <div id="back">
-            <div></div>
+            <header>
+                <!-- TOP MENU -->
+                <ul class="row">
+                    <!-- LOGO -->
+                    <li class="col-lg-2 col-md-12 col-sm-12" id="logo"><a href="#"></a></li>
+                    <ul class="row col-lg-8 col-md-12 col-sm-12">
+                        <div class="col-lg-7">
+                            <h2>Эллинлайн</h2>
+                            <h3>Туристическая компания</h3>
+                        </div>
+                        <div class="row col-lg-5 align-content-center" id="search_field">
+                            <input class="col-10" type="text">
+                            <i class="col-2 fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <li class="col-lg col-sm-12"><a href="#">О компании</a></li>
+                        <li class="col-lg col-sm-12"><a href="#">Кнопка 2</a></li>
+                        <li class="col-lg col-sm-12"><a href="#">Кнопка 3</a></li>
+                        <li class="col-lg col-sm-12"><a href="#">Кнопка 4</a></li>
+                    </ul>
+                    <!-- <li class="col-lg-4 col-sm-12" id="info">
+                        <a href="#">Ваш туроператор с 1993 г.</a>
+                    </li> -->
+                </ul>
+            </header>
+            <!-- <div></div> -->
             <div class="search">
                 <h1>Успейте заказать тур вашей мечты!</h1>
                 <!-- TABS -->
@@ -81,26 +98,26 @@
         </div>
         <!-- ATTRACTIONS SPB -->
         <div id="attractions">
-            <h2>Обзор достопримечательностей города</h2>
-            <h1>Лучшие места для посещения в Санкт-Петербурге</h1>
+            <h2>Успейте купить, пока это не сделал кто-нибудь до вас!</h2>
+            <h1>Горящие туры</h1>
             <div id="picture_box" class="row">
                 <div class="col-lg col-sm-12">
                     <div id="_1" class="img">
 
                     </div>
-                    <h1>Эрмитаж</h1>
+                    <h2>Испания</h2>
                 </div>
                 <div class="col-lg col-sm-12">
                     <div id="_2"  class="img">
 
                     </div>
-                    <h1>Кунцкамера</h1>
+                    <h2>Греция</h2>
                 </div>
                 <div class="col-lg col-sm-12">
                     <div id="_3" class="img">
 
                     </div>
-                    <h1>Александровская колонна</h1>
+                    <h2>Турция</h2>
                 </div>
             </div>
         </div>
@@ -108,9 +125,7 @@
         <div id="tours">
             <div id="tours_box" class="row">
                 <div id="_1" class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="img">
-
-                    </div>
+                    <img src="images/hilovo.jpg" alt="">
                     <h2>Санатории</h2>
                     <h3>
                         Вы можете отдохнуть в одних из лудших санаториев России и Белоруссии
@@ -118,9 +133,7 @@
                     </h3>
                 </div>
                 <div id="_2" class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="img">
-
-                    </div>
+                    <img src="images/ship.jpg" alt="">
                     <h2>Паромы</h2>
                     <h3>
                         Туры на Виссарионе Белинском, Юрие Андропове, Леониде Соболеве, 
@@ -128,18 +141,14 @@
                     </h3>
                 </div>
                 <div id="_3" class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="img">
-
-                    </div>
+                    <img src="images/red_area.jpg" alt="">
                     <h2>Туры по России</h2>
                     <h3>
                         Туры по любому доступному курорту в России
                     </h3>
                 </div>
                 <div id="_4" class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="img">
-
-                    </div>
+                    <img src="images/mountain.jpg" alt="">
                     <h2>И не только..</h2>
                     <h3>
                         А также путешествия по Узбекистану, Арменнии, Болгарии, 
@@ -231,6 +240,7 @@
             </div>
             <button><h2>Оставить отзыв</h2></button>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1001.3672311219192!2d30.26083697203125!3d59.87015519679176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963a8913b9d98f%3A0xb67cd41e1c753bf2!2z0K3Qu9C70LjQvdC70LDQudC9!5e0!3m2!1sru!2sru!4v1604830930929!5m2!1sru!2sru" width="1440" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </main>
     <footer>
         <h1>КОНТАКТНАЯ ИНФОРМАЦИЯ</h1>
@@ -240,8 +250,10 @@
         </h2>
         <h3>Ellinline, Санкт-Петербург, Россия</h3>
         <hr>
-        <div class="icons">
-            
+        <div class="icons row">
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-facebook" aria-hidden="true"></i>
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-vk" aria-hidden="true"></i>
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-instagram" aria-hidden="true"></i>
         </div>
     </footer>
 </body>

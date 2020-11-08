@@ -1,38 +1,62 @@
 $(() => 
 {
-    
-    setTimeout(() => 
-    {
-        let elem = $('#comments .img');
-        elem.height(elem.width());
-    }, 200);
+    const feedback_height = 400;
+    //
+    let win_height = $(window).height() - $('header').height();
+    //For scrolling to the Top
+    $(window).scrollTop(0);
+    //For right height start image
+    $('#back').css('min-height', win_height);
+    $('#attractions').css('min-height', win_height);
+    $('#hotel').css('min-height', win_height);
+
 
     $(window).on('scroll', () => 
     {
         let header = $('header > ul');
+        let feedback = $('#feedback');
+        let offset_for_feedback = 0;
         if($(window).scrollTop() > $('#back').height())
-            header.css('background-color', 'rgba(255, 255, 255, 1)');
+            offset_for_feedback = $('#feedback > h3').height() + 20;
         else
-            header.css('background-color', 'rgba(255, 255, 255, 0.5)');
-    }).resize(() => 
-    {
-        let elem = $('#comments .img');
-        elem.height(elem.width());
-    });
-
-
-    $('header').on('click', () => 
-    {
-        $('header li').each((index, elem) => 
         {
-            $(elem).toggleClass('show');
-        })
+            feedback.data('active', false);
+        }
+        feedback.css('height', `${offset_for_feedback}px`);
     })
+    //Border radius comments images
+    .resize(() => 
+    {
+        shiftBetweenHeightAndWidth();
+        OptionMap(win_height);
+    });
+    setTimeout(() => 
+    {
+        shiftBetweenHeightAndWidth();
+    }, 10);
+    // END
+
+    showHeadOfPage();
+    OptionMap(win_height);
 
     attachClickOnTab('#tour');
     attachClickOnTab('#railroad');
     attachClickOnTab('#fly');
+    
+    showFeedback(feedback_height);
 });
+// GLOBAL
+function showHeadOfPage()
+{
+    $('header').on('click', () => 
+    {
+        $('header ul li').each((index, elem) => 
+        {
+            $(elem).toggleClass('show');
+        })
+    })
+}
+// END
 
 function attachClickOnTab(id_tab)
 {
@@ -46,4 +70,36 @@ function attachClickOnTab(id_tab)
             $(id_tab + '_tab').css('display', 'flex');
         }
     });
+}
+
+function showFeedback(need_height)
+{
+    let feedback = $('#feedback');
+    $('#feedback > h3').on('click', () => 
+    {
+        console.log(feedback.data('active'));
+        if(!feedback.data('active'))
+        {
+            feedback.css('height', need_height + 'px');
+            feedback.data('active', true);
+        }
+        else
+        {
+            feedback.css('height', ($('#feedback > h3').height() + 20) + 'px');
+            feedback.data('active', false);
+        }
+    });
+}
+
+function shiftBetweenHeightAndWidth()
+{
+    let elem = $('#comments .img');
+    elem.height(elem.width());
+}
+
+function OptionMap(height)
+{
+    let map = $('iframe');
+    map.attr('width', $(window).width());
+    map.attr('height', height);
 }

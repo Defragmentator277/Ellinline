@@ -2,6 +2,7 @@
 main
 {
     height: fit-content;
+    background-color: rgb(44, 47, 46);
 }
 
 
@@ -11,7 +12,7 @@ main
     background-image: url(images/back_main.jpg);
     background-position: center;
     background-size: cover;
-    height: 1450px;
+    /* height: 200px; */
 }
 #back > div:not(.search)
 {
@@ -39,7 +40,8 @@ main
 .search .tabs > li
 {
     display: inline-block;
-    background-color: white;
+    background-color: rgb(33, 31, 30);
+    z-index: -1;
     opacity: 0.5;
     padding: 5px;
     padding-bottom: 15px;
@@ -50,13 +52,13 @@ main
 {
     display: block;
     height: fit-content;
-    background-color: white;
+    z-index: 1;
+    background-color: rgb(33, 31, 30);
     padding: 25px;
 }
 .pages > li
 {
     margin: 0;
-    padding: 5px 0px;
     height: fit-content;
     width: 100%;
 }
@@ -80,6 +82,7 @@ main
     /* height: 100%; */
     margin: 0 auto;
     border-radius: 0;
+    background-color: rgb(44, 47, 46);
 }
 #tour_tab button h3
 {
@@ -94,7 +97,7 @@ main
 }
 .enter_words > hr
 {
-    background-color: black;
+    background-color: white;
     height: 5px;
 }
 .enter_words > h1
@@ -114,15 +117,19 @@ main
 {
     margin: 0 auto;
     padding: 25px 35px;
-    background-color: #CACACA;
+    background-color: #2A2729;
     margin-bottom: 35px;
 }
-
+#attractions > h1
+{
+    margin-bottom: 15px;
+}
 #attractions > h2
 {
     word-break: break-all;
     opacity: 0.75;
     margin-bottom: 10px;
+    color: #938C90;
 }
 
 .img
@@ -141,22 +148,22 @@ main
     height: 1000px;
 }
 
-#picture_box .img ~ h1
+#picture_box .img ~ h2
 {
     text-align: center;
 }
 
 #picture_box  #_1
 {
-    background-image: url(images/ermitage.jpg);
+    background-image: url(images/spain.jpg);
 }
 #picture_box  #_2
 {
-    background-image: url(images/cunzcamera.jpg);
+    background-image: url(images/greece.jpg);
 }
 #picture_box  #_3
 {
-    background-image: url(images/column.jpg);
+    background-image: url(images/turkey.jpg);
 }
 
 #tours
@@ -165,6 +172,7 @@ main
     height: fit-content;
     box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
     padding: 25px 35px;
+    background-color: rgb(33, 31, 30);
 }
 #tours > button
 {
@@ -175,37 +183,40 @@ main
 
 #tours_box > div 
 {
-    height: fit-content;
+    height: 100%;
+    overflow: hidden;
 }
-#tours_box .img
+#tours_box > div img
 {
     width: 100%;
-    height: 600px;
+    /* height: 50%; */
+    /* height: 600px; */
 }
-#tours_box .img ~ h2
+#tours_box img ~ h2
 {
     font-weight: bold;
 }
-#tours_box .img ~ h3
+#tours_box img ~ h3
 {
     text-align: justify;   
+    color: #938C90;
 }
-#tours_box #_1 > .img
+/* #tours_box #_1 > img
 {
     background-image: url(images/hilovo.jpg);
 }
-#tours_box #_2 > .img
+#tours_box #_2 > img
 {
     background-image: url(images/ship.jpg);
 }
-#tours_box #_3 > .img
+#tours_box #_3 > img
 {
     background-image: url(images/red_area.jpg);
 } 
-#tours_box #_4 > .img
+#tours_box #_4 > img
 {
     background-image: url(images/mountain.jpg);
-}
+} */
 
 #hotel
 {
@@ -244,6 +255,10 @@ main
 {
     text-align: center;
 }
+#hotel > div > div h2
+{
+    color: #938C90;
+}
 #hotel button
 {
     display: block;
@@ -255,12 +270,11 @@ main
 #reviews
 {
     padding: 15px 25px;
-    background-color: #CACACA;
 }
-#reviews > .enter_words > hr
+/* #reviews > .enter_words > hr
 {
     background-color: white;
-}
+} */
 #reviews button
 {
     display: block;
@@ -287,6 +301,11 @@ main
 {
     padding-bottom: 15px;
 }
+.comment h3
+{
+    color: #938C90;
+}
+
 #comments #_1 .img
 {
     background-image: url(images/people_1.jpg);
@@ -304,12 +323,29 @@ main
     background-image: url(images/people_4.jpg);
 }
 
+.icons
+{
+    margin: 0 auto;
+    /* width: 150px; */
+}
+.icons > i 
+{
+    font-size: 3em;
+    margin: 10px auto;
+    color: rgb(198,190,123);
+}
+.icons > i:hover
+{
+    cursor: pointer;
+    color: white;
+}
+
 @media all and (max-width: 1440px)
 {
-    #back
+    /* #back
     {
         height: 750px;
-    }
+    } */
 
     .enter_words hr
     {
@@ -338,10 +374,10 @@ main
 }
 @media all and (max-width: 1024px)
 {
-    #back
+    /* #back
     {
         height: 600px;
-    }
+    } */
 
     #hotel
     {
