@@ -13,9 +13,24 @@
 </head>
 <body>
     <!-- FEEDBACK FORM -->
-    <div id="feedback" data-active="false">
+    <form id="feedback" data-active="false">
         <h3>Обратная связь</h3>
-    </div>
+        <div class="row">
+            <i class="col-2 fa fa-address-book" aria-hidden="true"></i>
+            <input class="col-10" type="text" id="name_input" required placeholder="Имя">
+        </div>
+        <div class="row">
+            <i class="col-2 fa fa-envelope" aria-hidden="true"></i>
+            <input class="col-10" type="email" id="email_input" required placeholder="E-mail">
+        </div>
+        <div class="row">
+            <i class="col-2 fa fa-phone-square" aria-hidden="true"></i>
+            <input class="col-10" type="tel" id="telephone_input" required placeholder="Телефон">
+        </div>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <textarea id="text_textarea" cols="30" rows="6" placeholder="Сообщение"></textarea>
+        <button>Отправить</button>
+    </form>
     <!-- <div id="uppage">
         <h3>^^</h3>
     </div> -->

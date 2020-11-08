@@ -6,7 +6,7 @@ $(() =>
     //For scrolling to the Top
     $(window).scrollTop(0);
     //For right height start image
-    $('#back').css('min-height', win_height);
+    $('#back').css('min-height', win_height * (win_height >= 768 ? 1: 1.4));
     $('#attractions').css('min-height', win_height);
     $('#hotel').css('min-height', win_height);
 
@@ -15,9 +15,13 @@ $(() =>
     {
         let header = $('header > ul');
         let feedback = $('#feedback');
+        if(feedback.data('active'))
+            feedback.data('active', false);
         let offset_for_feedback = 0;
         if($(window).scrollTop() > $('#back').height())
+        {
             offset_for_feedback = $('#feedback > h3').height() + 20;
+        }
         else
         {
             feedback.data('active', false);
@@ -48,12 +52,13 @@ $(() =>
 // GLOBAL
 function showHeadOfPage()
 {
-    $('header').on('click', () => 
+    $('li#logo').on('click', () => 
     {
         $('header ul li').each((index, elem) => 
         {
             $(elem).toggleClass('show');
-        })
+        });
+        $('#search_field').toggleClass('show');
     })
 }
 // END
