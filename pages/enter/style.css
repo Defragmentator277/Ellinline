@@ -1,8 +1,8 @@
 /* MAIN PART */
 main
 {
-    height: fit-content;
     background-color: rgb(44, 47, 46);
+    height: fit-content;
 }
 
 
@@ -26,6 +26,10 @@ main
     bottom: 10%;
     left: 10%;
     right: 10%;
+}
+.search input
+{
+    height: 35px;
 }
 .search h1
 {
@@ -323,23 +327,6 @@ main
     background-image: url(images/people_4.jpg);
 }
 
-.icons
-{
-    margin: 0 auto;
-    /* width: 150px; */
-}
-.icons > i 
-{
-    font-size: 3em;
-    margin: 10px auto;
-    color: rgb(198,190,123);
-}
-.icons > i:hover
-{
-    cursor: pointer;
-    color: white;
-}
-
 @media all and (max-width: 1440px)
 {
     /* #back
@@ -369,7 +356,7 @@ main
 
     #tour_tab input
     {
-        height: 50px;
+        height: 35px;
     } 
 }
 @media all and (max-width: 1024px)

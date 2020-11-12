@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellinline</title>
+    <script src="../jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/6ca3a3f6a0.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="../bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+    <!--  -->
+    <!-- <link rel="import" href="../html_modules/header.html"> -->
+    <!-- <script type="module" src="../main.mjs"></script> -->
+    <script type="module" src="./main.js"></script>
+</head>
+<body>
+    <!-- FEEDBACK FORM -->
+    <form id="feedback" data-active="false">
+        <h3>Обратная связь</h3>
+        <div class="row">
+            <i class="col-2 fa fa-address-book" aria-hidden="true"></i>
+            <input class="col-10" type="text" id="name_input" required placeholder="Имя">
+        </div>
+        <div class="row">
+            <i class="col-2 fa fa-envelope" aria-hidden="true"></i>
+            <input class="col-10" type="email" id="email_input" required placeholder="E-mail">
+        </div>
+        <div class="row">
+            <i class="col-2 fa fa-phone-square" aria-hidden="true"></i>
+            <input class="col-10" type="tel" id="telephone_input" required placeholder="Телефон">
+        </div>
+        <i class="fa fa-comment" aria-hidden="true"></i>
+        <textarea id="text_textarea" cols="30" rows="6" placeholder="Сообщение"></textarea>
+        <button>Отправить</button>
+    </form>
+    
+    <header>
+        <!-- TOP MENU -->
+        <ul class="row">
+            <!-- LOGO -->
+            <li class="col-lg-2 col-md-12 col-sm-12" id="logo"><a href="#"></a></li>
+            <ul class="row col-lg-8 col-md-12 col-sm-12">
+                <div class="col-lg-7">
+                    <h2>Эллинлайн</h2>
+                    <h3>Туристическая компания</h3>
+                </div>
+                <div class="row col-lg-5 align-content-center" id="search_field">
+                    <input class="col-10" type="text" placeholder="Поиск страны">
+                    <i class="col-2 fa fa-search" aria-hidden="true"></i>
+                </div>
+                <li class="col-lg-2 col-sm-12"><a href="#">О компании</a></li>
+                <li class="col-lg-2 col-sm-12"><a href="#">Кнопка 2</a></li>
+                <li class="col-lg-2 col-sm-12"><a href="#">Кнопка 3</a></li>
+                <li class="col-lg-2 col-sm-12"><a href="#">Кнопка 4</a></li>
+            </ul>
+        </ul>
+    </header>
+
+    <main>
+
+
+    </main>
+
+    <footer>
+        <h1>КОНТАКТНАЯ ИНФОРМАЦИЯ</h1>
+        <h2>
+            Телефон: +7 800 555 35 35 <br>
+            Почта: Ellinline@mail.ru
+        </h2>
+        <h3>Ellinline, Санкт-Петербург, Россия</h3>
+        <hr>
+        <div class="icons row">
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-facebook" aria-hidden="true"></i>
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-vk" aria-hidden="true"></i>
+            <i class="col-lg-4 col-md-4 col-sm-4 fa fa-instagram" aria-hidden="true"></i>
+        </div>
+    </footer>
+</body>
+</html>

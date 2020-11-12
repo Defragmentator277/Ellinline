@@ -1,3 +1,5 @@
+import * as global_func from '../main.mjs';
+
 $(() => 
 {
     const feedback_height = 400;
@@ -6,7 +8,7 @@ $(() =>
     //For scrolling to the Top
     $(window).scrollTop(0);
     //For right height start image
-    $('#back').css('min-height', win_height * (win_height >= 768 ? 1: 1.4));
+    $('#back').css('min-height', win_height * ($(window).height() >= 768 ? 1 : 1.4));
     $('#attractions').css('min-height', win_height);
     $('#hotel').css('min-height', win_height);
 
@@ -40,7 +42,9 @@ $(() =>
     }, 10);
     // END
 
-    showHeadOfPage();
+    IncludingFiles();
+
+    global_func.showHeadOfPage();
     OptionMap(win_height);
 
     attachClickOnTab('#tour');
@@ -49,17 +53,11 @@ $(() =>
     
     showFeedback(feedback_height);
 });
-// GLOBAL
-function showHeadOfPage()
+
+function IncludingFiles()
 {
-    $('li#logo').on('click', () => 
-    {
-        $('header ul li').each((index, elem) => 
-        {
-            $(elem).toggleClass('show');
-        });
-        $('#search_field').toggleClass('show');
-    })
+    // var header = link.import.querySelector('header');
+    // document.getElementById('#fill').appendChild(header);
 }
 // END
 
