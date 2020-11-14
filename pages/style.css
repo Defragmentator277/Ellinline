@@ -3,6 +3,11 @@
     margin: 0;
     padding: 0;
 } */
+html a:hover
+{
+    text-decoration: none;
+    /* color: no; */
+}
 a, h1, h2, h3
 {
     color: rgb(198,190,123);
@@ -43,8 +48,12 @@ header
 {
     position: fixed;
     height: 120px;
+    min-height: 90px;
     width: 100%;
     z-index: 1;
+    padding-left: 10%;
+    background-color: rgba(46, 47, 44, 1);
+    border-bottom: 1px solid black;
 }
 #logo > a
 {
@@ -52,12 +61,6 @@ header
     height: 100%;
 }
 
-/* LOGO PART */
-header
-{
-    padding-left: 2.5%;
-    background-color: rgba(46, 47, 44, 1);
-}
 
 header h2
 {
@@ -80,21 +83,28 @@ header a
     width: 100%;
 }
 
+header .words
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
 header > ul > li#logo
 {
     display: inline-block;
     /* width: 25%; */
+    max-width: 125px;
     background-image: url(images/logo.png);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: center;
     height: inherit;    
 }
 
 li#logo ~ ul
 {
-    /* padding-left: 15px;
-    padding: 0; */
-    height: 50%;
+    height: 125%;
 }
 
 #search_field
@@ -144,10 +154,15 @@ header li#logo ~ ul li, #search_field
 header li#logo ~ ul li
 {
     display: block;
-    height: 100%;
+    height: 30%;
     padding: 0;
     background-color: rgba(46, 47, 44, 1);
     border: 1px solid black;
+}
+
+header ul div
+{
+    height: 60%;
 }
 
 /* MAIN PART */
@@ -354,10 +369,15 @@ footer hr
     {
         opacity: 1;
         background-position: center;
+        max-width: none;
     }
     header h3, header h2
     {
         display: none;
+    }
+    header ul div.words
+    {
+        height: 0;
     }
     #search_field
     {
