@@ -1,55 +1,213 @@
 main
 {
     display: flex;
+    position: relative;
+    width: 100%;
 }
-
+main > article
+{
+    width: 75%;
+}
 main > article, main > aside
 {
-    padding-top: 150px;
-    /* width: 70%; */
+    display: inline-block;
+    padding-top: 100px;
+    /* width: 70%; */   
 }
-main > article > div:nth-of-type(even)
+main > article > div
+{
+    padding-top: 50px;
+    padding-bottom: 15px;
+}
+main > article > div:nth-child(3n) /* 0, 3, 6  */
 {
     background-color: #2A2729;
 }
-main > article > div:nth-of-type(odd)
+main > article > div:nth-child(3n + 1) /* 1, 4, 7 */
 {
     background-color: rgb(44, 47, 46);
+}
+main > article > div:nth-child(3n + 2) /* 2, 5, 8 */
+{
+    background-color: rgb(33, 31, 30);
+}
+/* ____________________________________ */
+main > article > div:nth-child(3n) > h1
+{
+    background-color: rgb(33, 31, 30);
+}
+main > article > div:nth-child(3n + 1) > h1
+{
+    background-color:  #2A2729;
+}
+main > article > div:nth-child(3n + 2) > h1
+{
+    background-color: rgb(44, 47, 46);
+}
+main > article > div > h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    /* padding: 30px; */
 }
 
 main > aside
 {
-    /* width: 30%; */
-    border-left: 1px solid black;
-    /* padding: 0 10px; */
+    transition: background-color .5s cubic-bezier(0.33, 1, 0.68, 1);
+    width: 25%;
+    /* overflow: hidden; */
 }
-main > aside > div
+main > aside > div /* #right_menu */
 {
     position: sticky;
-    top: 120px;
-    border: 0.5px solid black;
-    border-left: none;
+    top: 100px;
 }
 main > aside a
 {
     display: block;
-    color: #938C90;
     padding-left: 15px;
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    margin-right: 10px;
+    border: 0.5px solid black;
+    border-left: none;
+}
+#right_menu a
+{
+    /* display: inline-block; */
+    font-size: calc(0.6em + 1vw);
+    color: #938C90;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: none;
+    z-index: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1), color 0.1s linear, max-width 1s cubic-bezier(0.83, 0, 0.17, 1);
+}
+#right_menu a:hover
+{
+    cursor: pointer;
+    box-shadow: 5px 0px 9px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+#right_menu a:nth-child(3n) /* 0, 3, 6 */
+{
+    background-color: rgb(33, 31, 30);
+}
+#right_menu a:nth-child(3n + 1) /* 1, 4, 7 */
+{
+    background-color:  #2A2729;
+}
+#right_menu a:nth-child(3n + 2) /* 2, 5, 8 */
+{
+    background-color: rgb(44, 47, 46);  
 }
 
+.img
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+article > div > div > div
+{
+    padding: 0 25px;
+    margin: 10px 0;
+    /* margin-bottom: 15px; */
+}
 #why_we
 {
+    text-align: left;
     /* text-align: center; */
 }
-#why_we > h1
+#why_we .img
 {
-    text-align: center;
-    background-color: #2A2729;
-    padding: 30px;
+    background-image: url(./images/we.jpg);
+    /* width: 100%; */
+}
+/* #why_we .carousel-item img
+{
+
+} */
+
+#reviews
+{
+
+} 
+#reviews > h1
+{
+    margin-bottom: 15px;
+}
+.block_comment
+{
+    padding: 0 15px;
+    padding-left: 75px;
+}
+.comment
+{
+    margin-bottom: 15px;    
+}
+.comment > .img
+{
+    border-radius: 50%;
+    background-image: url(./images/face_0.jpg);
+}
+.comment  h3
+{
+    color: #938C90;
 }
 #essential
 {
 
 }
+
+@media all and (max-width: 991px)
+{
+    main > article
+    {
+        /* width: 95%; */
+        flex-basis: 100%;
+    }
+    #why_we
+    {
+        padding-top: 0;
+    }
+    main > article > div
+    {
+        padding-top: 10px;
+    }
+    main > aside
+    {
+        position: absolute;
+        right: 5px;
+        /* left: 5px; */
+        /* overflow: hidden; */
+        /* max-width: 0; */
+    }
+    #why_we .img
+    {
+        height: 350px;
+        margin-bottom: 10px;
+    }
+    #right_menu
+    {
+        /* display: none; */
+        /* position: absolute; */
+        /* display: none; */
+        /* position: absolute;
+
+        overflow: hidden; */
+    }
+}
+
+/* ANIMATION CLASSES */
+#right_menu a.active
+{
+    color: rgb(198, 190, 123);
+}
+/* #right_menu a.show
+{
+    max-width: 100%;
+} */

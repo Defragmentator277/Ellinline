@@ -2,7 +2,6 @@ import * as global_func from '../main.mjs';
 
 $(() => 
 {
-    const feedback_height = 400;
     //
     let win_height = $(window).height() - $('header').height();
     //For scrolling to the Top
@@ -13,45 +12,32 @@ $(() =>
     $('#hotel').css('min-height', win_height);
 
 
-    $(window).on('scroll', () => 
-    {
-        let header = $('header > ul');
-        let feedback = $('#feedback');
-        if(feedback.data('active'))
-            feedback.data('active', false);
-        let offset_for_feedback = 0;
-        if($(window).scrollTop() > $('#back').height())
-        {
-            offset_for_feedback = $('#feedback > h3').height() + 20;
-        }
-        else
-        {
-            feedback.data('active', false);
-        }
-        feedback.css('height', `${offset_for_feedback}px`);
-    })
     //Border radius comments images
-    .resize(() => 
+    $(window).resize(() => 
     {
-        shiftBetweenHeightAndWidth();
+        global_func.shiftBetweenHeightAndWidth($('#comments .img'));
         OptionMap(win_height);
     });
     setTimeout(() => 
     {
-        shiftBetweenHeightAndWidth();
+        global_func.shiftBetweenHeightAndWidth($('#comments .img'));
     }, 10);
     // END
 
     IncludingFiles();
 
+    //GLOBAL FUNCTIONS
     global_func.showHeadOfPage();
+    global_func.showLittleFeedback($('#back').height());
+    global_func.showFeedback();
+    global_func.shiftBetweenHeightAndWidth($('#comments .img'));
+
+    //LOCAL FUNCTIONS
     OptionMap(win_height);
 
     attachClickOnTab('#tour');
     attachClickOnTab('#railroad');
     attachClickOnTab('#fly');
-    
-    showFeedback(feedback_height);
 });
 
 function IncludingFiles()
@@ -73,31 +59,6 @@ function attachClickOnTab(id_tab)
             $(id_tab + '_tab').css('display', 'flex');
         }
     });
-}
-
-function showFeedback(need_height)
-{
-    let feedback = $('#feedback');
-    $('#feedback > h3').on('click', () => 
-    {
-        console.log(feedback.data('active'));
-        if(!feedback.data('active'))
-        {
-            feedback.css('height', need_height + 'px');
-            feedback.data('active', true);
-        }
-        else
-        {
-            feedback.css('height', ($('#feedback > h3').height() + 20) + 'px');
-            feedback.data('active', false);
-        }
-    });
-}
-
-function shiftBetweenHeightAndWidth()
-{
-    let elem = $('#comments .img');
-    elem.height(elem.width());
 }
 
 function OptionMap(height)

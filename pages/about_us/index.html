@@ -13,6 +13,7 @@
     <!--  -->
     <!-- <link rel="import" href="../html_modules/header.html"> -->
     <!-- <script type="module" src="../main.mjs"></script> -->
+    <script src="../bootstrap.min.js"></script>
     <script type="module" src="./main.js"></script>
 </head>
 <body>
@@ -36,11 +37,11 @@
         <button>Отправить</button>
     </form>
     
-    <header>
+    <header class="fixed-top">
         <!-- TOP MENU -->
         <ul class="row">
             <!-- LOGO -->
-            <li class="col-lg-2 col-md-12 col-sm-12" id="logo"><a href="#"></a></li>
+            <li class="col-lg-2 col-md-12 col-sm-12" id="logo"><a href="../enter/index.html"></a></li>
             <ul class="row col-lg-8 col-md-12 col-sm-12">
                 <div class="words col-lg-7">
                     <h2>Эллинлайн</h2>
@@ -61,35 +62,343 @@
     <!-- MAIN PART -->
     <main>
         <!-- LEFT -->
-        <article class="w-75">
-            <div>
-                <h1 id="why_we">Почему Эллинлайн?</h1>
-                <!-- <h3>
-                    Компания Coral Travel осуществляет мечты людей об идеальном отдыхе с 1995 года – уже 25 лет! Туроператор предлагает путешествия в 39 стран мира с вылетами из более 40 городов России. Вниманию туристов Coral Travel представлены лучшие курорты и отели Турции, России, Туниса, Таиланда, Вьетнама, Греции, Испании, и других стран.
-Более 14 000 туристических агентств по всей России осуществляют продажу туров от Coral Travel. Мы также обладаем самой большой франчайзинговой сетью в стране, которая насчитывает более 900 фирменных офисов. Помимо этого, для наших туристов открыта единственная в России премиальная сеть агентств Coral Travel Elite Service, которая на данный момент насчитывает более 40 офисов продаж.
-                </h3> -->
+        <article>
+            <div id="why_we">
+                <h1>Почему Эллинлайн?</h1>
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <!-- SLIDER ?MAYBE? -->
+                        <div class="col-lg-4 col-md-12 img">
+    
+                        </div>
+                        <h3 class="d-block col-lg col-md-12">
+                            Компания Coral Travel осуществляет мечты людей об идеальном отдыхе с 1995 года – уже 25 лет! Туроператор предлагает путешествия в 39 стран мира с вылетами из более 40 городов России. Вниманию туристов Coral Travel представлены лучшие курорты и отели Турции, России, Туниса, Таиланда, Вьетнама, Греции, Испании, и других стран.
+        Более 14 000 туристических агентств по всей России осуществляют продажу туров от Coral Travel. Мы также обладаем самой большой франчайзинговой сетью в стране, которая насчитывает более 900 фирменных офисов. Помимо этого, для наших туристов открыта единственная в России премиальная сеть агентств Coral Travel Elite Service, которая на данный момент насчитывает более 40 офисов продаж.
+                        </h3>
+                    </div>
+                </div>
             </div>
             <div id="essential">
-
+                <h1>Реквизиты</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-5">
+                        <img class="w-100" src="./images/document.jpg">
+                    </div>
+                    <div class="col-lg-8 col-md-7">
+                        <h3>
+                            ООО "Эллинлайн" <br>
+                            ИНН 7807028247 <br>
+                            КПП 780701001 <br> <br>
+                            Фактический адрес - 198096, Санкт-Петербург, ул. Зайцева д. 3 <br>
+                            Почтовый адрес - 198096, Санкт-Петербург, ул. Зайцева д. 3 <br>
+                            Банковский реквизиты: ПАО "Банк "Санкт-Петербург", доп. офис "Нарвский"" <br> <br>
+                            Р/с: 40702810145000000839 <br>
+                            К/с: 30101810900000000790 <br>
+                            БИК 044030790 <br>
+                        </h3>
+                    </div>
+                </div>
             </div>
             <div id="reviews">
-    
+                <h1>Отзывы</h1>
+                <div>
+                    <!-- START -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                          <div class="carousel-item active">
+                            <div class="w-100 block_comment row">
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Лучшие туры, а также скидки на них только тут,
+                                            попробуйте хоть один тур и вы не пожалеете,
+                                            я вас предупредил, дерзайте!
+                                        </h3>
+                                        <h2>Людвиг Бетховен</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Лучшие туры, а также скидки на них только тут,
+                                            попробуйте хоть один тур и вы не пожалеете,
+                                            я вас предупредил, дерзайте!
+                                        </h3>
+                                        <h2>Людвиг Бетховен</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Лучшие туры, а также скидки на них только тут,
+                                            попробуйте хоть один тур и вы не пожалеете,
+                                            я вас предупредил, дерзайте!
+                                        </h3>
+                                        <h2>Людвиг Бетховен</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Лучшие туры, а также скидки на них только тут,
+                                            попробуйте хоть один тур и вы не пожалеете,
+                                            я вас предупредил, дерзайте!
+                                        </h3>
+                                        <h2>Людвиг Бетховен</h2>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="w-100 block_comment row">
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Возможно вам скажут что где-то есть туры
+                                            дешевле и лучше, но не верьте этим лжецам, 
+                                            здесь вы выбирите качество и приключение
+                                        </h3>
+                                        <h2>Антон борисович</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Возможно вам скажут что где-то есть туры
+                                            дешевле и лучше, но не верьте этим лжецам, 
+                                            здесь вы выбирите качество и приключение
+                                        </h3>
+                                        <h2>Антон борисович</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Возможно вам скажут что где-то есть туры
+                                            дешевле и лучше, но не верьте этим лжецам, 
+                                            здесь вы выбирите качество и приключение
+                                        </h3>
+                                        <h2>Антон борисович</h2>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-sm-12 comment row">
+                                    <div class="w-25 img">
+
+                                    </div>
+                                    <div class="col">
+                                        <h3>
+                                            Возможно вам скажут что где-то есть туры
+                                            дешевле и лучше, но не верьте этим лжецам, 
+                                            здесь вы выбирите качество и приключение
+                                        </h3>
+                                        <h2>Антон борисович</h2>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <!-- <div class="carousel-item"> Button to leave the comment
+                              <button>Оставить комментарий</button>
+                          </div> -->
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <!-- END -->
+                    <!-- 1 -->
+                    <!-- 2 -->
+                    <!-- <div class="col-lg-12 block_comment row">
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 block_comment row">
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 block_comment row">
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 comment row">
+                            <img class="w-25" src="./images/face_0.jpg" alt="">
+                            <div class="col">
+                                <h3>
+                                    Лучшие туры, а также скидки на них только тут,
+                                    попробуйте хоть один тур и вы не пожалеете,
+                                    я вас предупредил, дерзайте!
+                                </h3>
+                                <h2>Людвиг Бетховен</h2>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
             </div>
             <div id="job">
+                <h1>Вакансии</h1>
     
             </div>
             <div id="rewards">
+                <h1>Награды</h1>
     
             </div>
+            <!-- <div>
+                <h1>FDf</h1>
+            </div> -->
         </article>
+        <!-- STICK -->
+        <div class="stick">
+
+        </div>
         <!-- RIGHT -->
-        <aside class="w-25">
+        <aside>
             <div id="right_menu">
-                <a href="#why_we">Почему Эллинлайн?</a>
-                <a href="#essential">Реквизиты</a>
-                <a href="#reviews">Отзывы</a>
-                <a href="#job">Вакансии</a>
-                <a href="#rewards">Награды</a>
+                <a class="active">Почему Эллинлайн?</a>
+                <a>Реквизиты</a>
+                <a>Отзывы</a>
+                <a>Вакансии</a>
+                <a>Награды</a>
             </div>
             <!-- <h2>Почему Эллинлайн?</h2> -->
         </aside>
