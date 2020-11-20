@@ -217,7 +217,7 @@ footer hr
 #feedback
 {
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     background-color: #2A2729;
     border: 2px solid rgb(198, 190, 123);
     border-radius: 10px;
@@ -364,6 +364,7 @@ footer hr
     }
     header li#logo ~ ul li
     {
+        /* display: none; */
         height: 0;
         opacity: 0;
         margin-left: 15px;
@@ -387,6 +388,7 @@ footer hr
     }
     #search_field
     {
+        /* display: none; */
         padding: 15px 5px;
         margin-left: 30px;
         opacity: 0;

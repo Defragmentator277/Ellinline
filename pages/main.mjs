@@ -6,11 +6,14 @@ export function showHeadOfPage()
 {
     $('li#logo').on('click', () => 
     {
-        $('header ul li').each((index, elem) => 
+        $('header ul li:not(li#logo)').each((index, elem) => 
         {
+            // console.log($(elem).css('display'));
             $(elem).toggleClass('show');
+            // setTimeout($(elem).css('display', $(elem).css('display') == 'none' ? 'block' : 'none'), 1000);
         });
         $('#search_field').toggleClass('show');
+        // setTimeout($('#search_field').css('display', $('#search_field').css('display') == 'none' ? 'flex' : 'none'), 1000);
     })
 }
 

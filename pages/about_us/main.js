@@ -1,5 +1,7 @@
 import * as global_func from '../main.mjs';
 
+
+let Under_991 = false;
 $(() => 
 {
     //GLOBAL FUNCTIONS
@@ -9,8 +11,27 @@ $(() =>
     //
     let comment_images = $('.comment .img');
     global_func.shiftBetweenHeightAndWidth(comment_images);
-    $(window).on('resize', () => global_func.shiftBetweenHeightAndWidth(comment_images));
+    $(window).on('resize', () => 
+    {
+        //To resize comments images
+        global_func.shiftBetweenHeightAndWidth(comment_images);
+        if($(window).width() <= 991)
+        {
+            console.log('under or eqvivalent 991px');
+            Under_991 = true;
+        }
+        else
+        {
+            Under_991 = false;
+        }
+    });
+    setTimeout(() => 
+    {
+        global_func.shiftBetweenHeightAndWidth(comment_images);
+    }, 10);
     //
+    if($(window).width() <= 991)
+        Under_991 = true;
 
     console.log('document ready');
     const win_heigth = $(window).height() - $('header').height();
@@ -20,6 +41,7 @@ $(() =>
 
     //LOCAL FUNCTIONS
     AttachButtonsRightMenu();
+    AttachEventToExpandButton();
     WindowOnScroll();
 });
 
@@ -42,9 +64,46 @@ function AttachButtonsRightMenu()
     }
 }
 
-// function AppearButtons()
-// {
-// }
+function AttachEventToExpandButton()
+{
+    let right_panel = $('main > aside');
+    let right_menu = $('#right_menu');
+    right_panel.on('click', () => 
+    {
+        if(Under_991)
+        {
+            if(!right_panel.hasClass('expand'))
+                right_menu.css('display', 'block');
+            else
+                setTimeout(() => right_menu.css('display', 'none'), 1000);
+            right_panel.toggleClass('expand');
+        }
+    });
+    // let x_pos;
+    // right_panel.on('pointerdown', (event) => 
+    // {
+    //     event.preventDefault();
+    //     let x_pos = event.clientX;
+    //     let width_panel = right_panel.width();
+    //     console.log('dragstart ________________' + x_pos);
+    //     // pointermove
+    //     right_panel.on('pointermove', (event) => 
+    //     {
+    //         console.log('pointermove');
+    //         let adjust = x_pos - event.clientX;
+    //         if(adjust > 0)
+    //             right_panel.width(width_panel + adjust);
+    //         console.log(x_pos);
+    //     });
+    //     // pointerup
+    //     right_panel.on('pointerleave', (event) => 
+    //     {
+    //         console.log('dragend _________________' + x_pos);
+    //         $('main').on('pointermove', () => {});
+    //         right_panel.on('pointerup', () => {});
+    //     });
+    // });
+}
 
 function WindowOnScroll()
 {
@@ -52,7 +111,6 @@ function WindowOnScroll()
     {
         // let childs = $('main > article > div').children();
         let scrollTop = $(window).scrollTop();
-        console.log(scrollTop);
         for(let i = 0; i < button_menu.length; i++)
         {
             let elem = $('#' + button_menu[i]);
@@ -66,7 +124,6 @@ function WindowOnScroll()
                     unact_elem.addClass('active');
                     //Chainge background color for connections between backgrounds
                     $('main > aside').css('background-color', elem.css('backgroundColor'));
-                    console.log('chainge active!');
                     break;
                 }
                 else

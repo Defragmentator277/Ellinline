@@ -1,3 +1,4 @@
+
 main
 {
     display: flex;
@@ -55,9 +56,16 @@ main > article > div > h1
 
 main > aside
 {
-    transition: background-color .5s cubic-bezier(0.33, 1, 0.68, 1);
+    transition: background-color .5s cubic-bezier(0.33, 1, 0.68, 1), width 1s cubic-bezier(0.65, 0, 0.35, 1);
     width: 25%;
     /* overflow: hidden; */
+}
+main > aside i.fa
+{
+    display: none;
+    /* margin: 0 auto;  */
+    font-size: calc(1.5em + 1vw);
+    color: rgb(198, 190, 123);
 }
 main > aside > div /* #right_menu */
 {
@@ -66,14 +74,17 @@ main > aside > div /* #right_menu */
 }
 main > aside a
 {
+}
+/* #right_menu
+{
+} */
+#right_menu a
+{
     display: block;
     padding-left: 15px;
     margin-right: 10px;
     border: 0.5px solid black;
     border-left: none;
-}
-#right_menu a
-{
     /* display: inline-block; */
     font-size: calc(0.6em + 1vw);
     color: #938C90;
@@ -83,7 +94,7 @@ main > aside a
     z-index: 0;
     max-width: 0;
     overflow: hidden;
-    transition: box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1), color 0.1s linear, max-width 1s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: box-shadow 0.25s cubic-bezier(0.25, 1, 0.5, 1), color 0.2s linear, max-width 1s cubic-bezier(0.83, 0, 0.17, 1);
 }
 #right_menu a:hover
 {
@@ -111,7 +122,7 @@ main > aside a
     background-repeat: no-repeat;
 }
 
-article > div > div > div
+article > div > div
 {
     padding: 0 25px;
     margin: 10px 0;
@@ -147,6 +158,7 @@ article > div > div > div
 }
 .comment
 {
+    justify-content: center;
     margin-bottom: 15px;    
 }
 .comment > .img
@@ -160,15 +172,24 @@ article > div > div > div
 }
 #essential
 {
-
+}
+#job div h1
+{
+    font-size: calc(1em + 1vw);
+}
+#job .img
+{
+    height: 75%;
+    /* width: 100%; */
+    background-image: url(./images/spb_0.jpg);
 }
 
 @media all and (max-width: 991px)
 {
     main > article
     {
-        /* width: 95%; */
-        flex-basis: 100%;
+        width: 95%;
+        /* flex-basis: 100%; */
     }
     #why_we
     {
@@ -181,24 +202,80 @@ article > div > div > div
     main > aside
     {
         position: absolute;
-        right: 5px;
+        z-index: 1;
+        right: 0;
+        width: 5%;
+        top: 0px;
+        bottom: 0px;
+        background-color: rgb(44, 47, 46);
+        border-left: 1px solid black;
+        /* transition: ; */
+        /* transtition: ; */
         /* left: 5px; */
         /* overflow: hidden; */
         /* max-width: 0; */
+    }
+    main > aside i.fa
+    {
+        position: sticky;
+        top: 50%;
+        bottom: 50%;
+        display: inline-block;
+        margin-left: 5px;
+        /* padding: 0 8px; */
+        /* padding-left: 3px; */
+        transform: rotate(0deg);
+        transition: transform 1s linear, padding 1s linear;
+        /* height: 15px;
+        width: 15px */
+        /* bottom: 50%; */
+    }
+    #right_menu
+    {
+        opacity: 0;
+        display: none;
+        margin-left: 35px;
+        transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    #right_menu a
+    {
+        max-width: 0;
+        padding: 0;
+        margin: 0;
+        z-index: 3;
+        /* margin-left: 10px; */
+        padding-right: 10px;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+        border-right: none;
+        border-left: 1px solid black;
+        font-size: calc(1.5em + 1vw)
+    }
+    main > aside.expand
+    {
+        width: 95%;
+    }
+    main > aside.expand i.fa
+    {
+        transform: rotate(180deg);
+    }
+    main > aside.expand #right_menu
+    {
+        display: block;
+        opacity: 1;
+    }
+    main > aside.expand #right_menu a
+    {
+        max-width: 100%;
     }
     #why_we .img
     {
         height: 350px;
         margin-bottom: 10px;
     }
-    #right_menu
+    .stick
     {
-        /* display: none; */
-        /* position: absolute; */
-        /* display: none; */
-        /* position: absolute;
-
-        overflow: hidden; */
+        display: none;
     }
 }
 
